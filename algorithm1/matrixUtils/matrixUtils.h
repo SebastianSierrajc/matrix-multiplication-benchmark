@@ -67,7 +67,7 @@ void matrixFill(int m, int n, int a[m][n]);
 
 /*
  * Function: Init
- * Use matrixFill(m, n, a)
+ * Use matrixInit(m, n, a)
  * ----------------------------
  * Init the values of a matrix of size mxn
 */
@@ -75,7 +75,7 @@ void matrixInit(int m, int n, int a[m][n]);
 
 /*
  * Function: Init
- * Use matrixFill(m, n, a)
+ * Use matrixInitN(m, n, a)
  * ----------------------------
  * Init the values of a matrix of size nxn
 */
