@@ -26,7 +26,7 @@ int main(int argc, char **argv){
 
     matrixInitN(N, matrixA, matrixB, matrixC);
 
-    /*
+   /* 
     printf("Matrix A: \n");
     matrixPrint(N, N, matrixA);
     printf("Matrix B: \n");
