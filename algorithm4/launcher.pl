@@ -6,8 +6,8 @@
 $repetition = 30;
 $path = "./";
 @ejecutables = ("matrixAPP");
-@matrixSize = ("100", "200", "400", "800", "1000", "1200", "2000", "4000");
-@threads = ("1", "2", "4", "8");
+@matrixSize = ("800", "1000", "1400", "1800", "2000", "2400", "4000", "6000");
+@threads = ("1", "2", "3", "4", "5", "6", "8");
 
 foreach $exe (@ejecutables){
     foreach $size (@matrixSize){

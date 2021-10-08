@@ -44,7 +44,7 @@ void matrixT(int m, int n, double *a, double *r){
     int i, j;
     for(i=0; i<m; i++)
         for(j=0; j<n; j++)
-            r[j+i*m] = a[j+i*m];
+            r[i+j*n] = a[j+i*m];
 }
 
 void matrixPrint(int m, int n, double *a){
