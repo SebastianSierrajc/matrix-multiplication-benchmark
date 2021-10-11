@@ -8,7 +8,6 @@
 #define SIZE_DATA (1024*1024*64*3) 
 static double MEM_CHUNK[SIZE_DATA];
 
-// Estrategia declaracion de las variables a nivel global
 
 int main(int argc, char **argv){
 
