@@ -8,8 +8,6 @@
 #define SIZE_DATA (1024*1024*64*3) 
 static double MEM_CHUNK[SIZE_DATA];
 
-// Version 5. version del algoritmo filas por filas.
-
 
 int main(int argc, char **argv){
 
@@ -28,31 +26,29 @@ int main(int argc, char **argv){
 
     matrixInitN(N, matrixA, matrixB, matrixC);
 
-    /*
-    printf("Matrix A: \n");
-    matrixPrint(N, N, matrixA);
-    printf("Matrix B: \n");
-    matrixPrint(N, N, matrixB);
-    *//*
-    matrixT(N, N, matrixB, matrixC);
-    printf("Matrix BT: \n");
-    matrixPrint(N, N, matrixC);
-    */
+    // printf("Matrix A: \n");
+    // matrixPrint(N, N, matrixA);
+    // printf("Matrix B: \n");
+    // matrixPrint(N, N, matrixB);
+    // matrixT(N, N, matrixB, matrixC);
+    // printf("Matrix BT: \n");
+    // matrixPrint(N, N, matrixC);
+
     omp_set_num_threads(NUM_T);
     sampleStart();
 
 
     // Test matrix multiplication with OpenMP
 #pragma omp parallel for
-    for(i=0; i<N; i++){
-        for(j=0; j<N; j++){
+    for(i=0; i<N; i+=2){
+        for(j=0; j<N; j+=2){
             double *ptra, *ptrb;
             double c0, c1, c2, c3;
             c0 = c1 = c2 = c3 = 0.0;
             ptra = matrixA + (i*N);
             ptrb = matrixB + (j*N);
 
-            for(k=N; k>0; k-=2, ptra+=2, ptrb+=2){
+            for(k=N; k>=0; k-=2, ptra+=2, ptrb+=2){
                 double a0, a1, a2, a3;
                 double b0, b1, b2, b3;
                 a0 = *ptra; a1 = *(ptra + 1); a2 = *(ptra + 2); a3 = *(ptra + 3);

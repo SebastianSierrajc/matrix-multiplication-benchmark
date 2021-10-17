@@ -25,12 +25,12 @@ int main(int argc, char **argv){
 
     matrixInitN(N, matrixA, matrixB, matrixC);
 
-   /* 
-    printf("Matrix A: \n");
-    matrixPrint(N, N, matrixA);
-    printf("Matrix B: \n");
-    matrixPrint(N, N, matrixB);
-    */
+
+    // printf("Matrix A: \n");
+    // matrixPrint(N, N, matrixA);
+    // printf("Matrix B: \n");
+    // matrixPrint(N, N, matrixB);
+   
     omp_set_num_threads(NUM_T);
     sampleStart();
 
@@ -47,6 +47,9 @@ int main(int argc, char **argv){
             matrixC[j+i*N] = s;
         }   
     }
+
+    // printf("Matrix C: \n");
+    // matrixPrint(N, N, matrixC);
 
     sampleStop();
     printTime();

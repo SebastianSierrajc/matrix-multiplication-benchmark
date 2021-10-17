@@ -6,8 +6,8 @@
 $repetition = 30;
 $path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/algorithm5/";
 @ejecutables = ("MM1f");
-@matrixSize = ("100", "200", "400", "800", "1000", "1400", "1800", "2000", "2400", "4000");
-#@matrixSize = ("100", "200", "400", "800", "1000");
+# @matrixSize = ("100", "200", "400", "800", "1000", "1200", "2000", "4000");
+@matrixSize = ("500", "1000", "1200", "2000");
 @threads = ("1", "2", "4", "8");
 
 

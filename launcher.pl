@@ -6,7 +6,8 @@
 $repetition = 1;
 $path = "./algorithm";
 @ejecutables = ("launcher.pl");
-@algorithms = ("4", "5", "6", "7");
+# @algorithms = ("1", "2", "3", "4", "5", "6", "7");
+@algorithms = ("3", "4");
 
 foreach $exe (@ejecutables){
     foreach $algorithm (@algorithms){
