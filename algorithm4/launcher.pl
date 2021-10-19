@@ -3,7 +3,7 @@
 # Fichero para automatizacion de ejecucion por lotes, de un ejecutable,
 # dados parametros de entrada.
 
-$repetition = 19;
+$repetition = 30;
 $path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/algorithm4/";
 @ejecutables = ("MM1c");
 # @matrixSize = ("100", "200", "400", "800", "1000", "1200", "2000", "4000");

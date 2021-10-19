@@ -22,7 +22,7 @@ def main():
     writer.book = book
 
     for thread in threads:
-        readData(data, path+algorithm+"parcial2/", program, sizes, thread)
+        readData(data, path+algorithm+"outputs/", program, sizes, thread)
         data /= 1000000
         df = pd.DataFrame(data=data, columns=sizes)
         df.to_excel(writer, sheet_name=program+"-T"+thread)
