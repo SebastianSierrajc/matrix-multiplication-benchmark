@@ -4,7 +4,7 @@
 # dados parametros de entrada.
 
 $repetition = 30;
-$path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/algorithm4/";
+$path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/MM_OpenMP/";
 @ejecutables = ("MM1c");
 # @matrixSize = ("100", "200", "400", "800", "1000", "1200", "2000", "4000");
 @matrixSize = ("500", "1000", "1200", "2000");
