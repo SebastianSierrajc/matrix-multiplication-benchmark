@@ -4,8 +4,8 @@
 # dados parametros de entrada.
 
 $repetition = 30;
-$path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/algorithm4/";
-@ejecutables = ("MM1c");
+$path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/MM_Posix/";
+@ejecutables = ("MM1p");
 # @matrixSize = ("100", "200", "400", "800", "1000", "1200", "2000", "4000");
 @matrixSize = ("500", "1000", "1200", "2000");
 @threads = ("1", "2", "4", "8");
