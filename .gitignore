@@ -1,7 +1,5 @@
 # Prerequisites
 *.d
-outputs/
-*.xlsx
 
 # Object files
 *.o

@@ -4,16 +4,16 @@
 # dados parametros de entrada.
 
 $repetition = 1;
-$path = "/home/sebastian/workspace-cs/matrix-multiplication-benchmark/";
+$path = "./algorithm";
 @ejecutables = ("launcher.pl");
 # @algorithms = ("1", "2", "3", "4", "5", "6", "7");
-@algorithms = ("MM_Posix", "MM_OpenMP");
+@algorithms = ("3", "4");
 
 foreach $exe (@ejecutables){
     foreach $algorithm (@algorithms){
-      print("$algorithm Start.\n");
-      system("$path$algorithm/$exe");
-      print("$algorithm Done.\n");
+      print("algorithm-$algorithm Start.\n");
+      system("./$path$algorithm/$exe");
+      print("algorithm-$algorithm Done.\n");
     }
 }
 

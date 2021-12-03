@@ -1,9 +1,9 @@
 GCC = gcc
-FLAGS = -ansi -std=c99 -pedantic -Wall -pthread
+FLAGS = -ansi -std=c99 -pedantic -Wall -fopenmp
 CFLAG = -lm
-PROGRAMS = MM1p
+PROGRAMS = MM1fu
 
-MM1p:
+MM1fu:
 	$(GCC) $(FLAGS) matrixUtils/matrixUtils.c -c -o matrixUtils/matrixUtils.o
 	$(GCC) $(FLAGS) benchmarkUtils/timeUtils.c -c -o benchmarkUtils/timeUtils.o
 	$(GCC) $(FLAGS) $@.c -c

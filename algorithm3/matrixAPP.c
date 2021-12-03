@@ -26,10 +26,10 @@ void *matrixMulT(void *arg){
     
     for(i=startRow; i<endRow; i++){
         for(j=0; j<N; j++){
-            double *ptra, *ptrb, add = 0.0;
+            double *ptra, *ptrb, add =0.0;
             ptra = a+(i*N);
             ptrb = b+j;
-            for(k=0; k<N; k++, ptra++, ptrb+=N)
+            for(k=0; k<N; k++, ptra++, ptrb++)
                 add += (*ptra * *ptrb);
             c[j+i*N] = add;
         }
@@ -51,11 +51,11 @@ int main(int argc, char **argv){
     
     matrixInitN(N, a, b,c); 
     
-    // matrixPrint(N, N, a);
-    // printf("\n");
-    // matrixPrint(N, N, b);
-    // printf("\n");
-    // matrixPrint(N, N, c);
+    /*matrixPrint(N, N, a);
+    printf("\n");
+    matrixPrint(N, N, b);
+    printf("\n");
+    matrixPrint(N, N, c);*/
     
     sampleStart();
 
@@ -77,7 +77,7 @@ int main(int argc, char **argv){
     sampleStop();
     printTime();
 
-    // matrixPrint(N, N, c);
+    /*matrixPrint(N, N, c);*/
 
     return 0;
 }
