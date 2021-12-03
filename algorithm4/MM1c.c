@@ -14,11 +14,14 @@ int main(int argc, char **argv){
     int N = (int) atoi(argv[1]); // matrix size NxN
     int NUM_T = (int) atoi(argv[2]); //number of threads
 
-
+//#pragma omp parallel 
     double *matrixA, *matrixB, *matrixC;
     matrixA = MEM_CHUNK;
     matrixB = matrixA + (N * N);
     matrixC = matrixB + (N * N);
+
+    // The main process make the init routines
+//#pragma omp master
 
     matrixInitN(N, matrixA, matrixB, matrixC);
 
